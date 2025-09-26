@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "image": "python.png",
+    "icon": "python-icon.png",
+    "title": "Python Programming",
+    "description": "Learn the language powering AI, data science, and modern apps",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "Prof. James Okoro",
+    "rating": 4.5,
+    "learners": 1200
+  },
+  {
+    "id": 2,
+    "image": "digmar.png",
+    "icon": "digmar-icon.png",
+    "title": "Digital Marketing",
+    "description": "From SEO to social media, build campaigns that convert.",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "Prof. Sophia Adeyemi",
+    "rating": 5,
+    "learners": 890
+  },
+  {
+    "id": 3,
+    "image": "design.png",
+    "icon": "design-icon.png",
+    "title": "UI/UX Design",
+    "description": "Turn creativity into user-friendly interfaces and digital products",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "Prof. Daniel Musa",
+    "rating": 3,
+    "learners": 1700
+  }
+]
