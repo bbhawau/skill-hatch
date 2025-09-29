@@ -15,7 +15,7 @@ const CoursesPage = () => {
     return (
         <div className="flex flex-col w-full px-10">
             <UserInfo />
-            <p className="font-medium mb-3">Courses</p>
+            <h1 className="font-medium text-xl mb-3">Courses</h1>
             <div className=" w-full place-items-center items-center">
                 <div className="flex bg-[#c2deff] rounded-full w-1/5 p-0.5 justify-between ">
                     <button

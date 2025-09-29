@@ -6,7 +6,7 @@ const Home = () => {
         <div className="flex flex-col w-full px-10">
             <UserInfo/>
 
-            <p className="font-medium mb-3">Dashboard Overview</p>
+            <h1 className="font-medium text-xl mb-3">Dashboard Overview</h1>
             <div className=" grid grid-cols-4 gap-8">
                 <div className="border-3 border-[#00418c] rounded-md p-3">
                     <p className="text-4xl font-medium tracking-wide">60%</p>
