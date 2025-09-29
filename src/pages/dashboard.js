@@ -3,6 +3,7 @@ import Button from "../components/Button";
 import Home from "./home";
 import { AuthContext } from "../App";
 import { useNavigate } from "react-router-dom";
+import CoursesPage from "./courses_page";
 
 const Dashboard = () => {
   const [active, setActive] = useState("home");
@@ -14,7 +15,7 @@ const Dashboard = () => {
       case "home":
         return <Home />;
       case "courses":
-        return <h1>courses</h1>;
+        return <CoursesPage/>;
       case "assessments":
         return <h1>assessments</h1>;
       case "profile":
@@ -48,7 +49,7 @@ const Dashboard = () => {
               variant={active === item.key ? "lightblue" : "blue"} // highlight active
               icon={item.icon}
               text={item.label}
-              className=" w-full justify-start mb-2 "
+              className=" w-full justify-start mb-2 py-2 "
               onClick={() => setActive(item.key)}
             />
           ))}
