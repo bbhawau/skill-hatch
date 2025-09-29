@@ -2,10 +2,14 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useState, useContext } from "react";
+import { AuthContext } from "../App";
 const Login = () => {
   const [successMsg, setSuccessMsg] = useState("");
+  const { setUserEmail } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const schema = yup.object().shape({
     email: yup.string().email("Invalid email").required("Email is required"),
     password: yup
@@ -14,6 +18,7 @@ const Login = () => {
       .max(20, "Password cannot be more than 20 characters")
       .required("Password is required"),
   });
+
   const {
     register,
     handleSubmit,
@@ -24,11 +29,17 @@ const Login = () => {
     mode: "onSubmit",
     reValidateMode: "onSubmit",
   });
+
   const onSubmit = (data) => {
     console.log(data);
+    setUserEmail(data.email);
     setSuccessMsg("✅ Login successful!");
     reset();
-    setTimeout(() => setSuccessMsg(""), 3000);
+    
+    setTimeout(() => {
+      setSuccessMsg("");
+      navigate("/dashboard");
+    }, 2000);
   };
   return (
     <div className="w-full place-items-center items-center">

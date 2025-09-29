@@ -104,7 +104,7 @@ export const LandingPage = () => {
             Explore our most viewed courses on SkillHatch.
           </p>
           <div>
-            <Courses />
+            <Courses limit={3} />
           </div>
           <Button variant="blue" text="Explore all courses" />
         </div>
@@ -357,7 +357,7 @@ export const LandingPage = () => {
           </div>
           {/* quick links */}
           <div className="w-7/10">
-            <p className="font-medium text-xl">Quick Links</p>
+            <p className="font-medium text-xl mb-2">Quick Links</p>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-xs">
               {/* <!-- Column 1 --> */}
               <div>
@@ -434,7 +434,7 @@ export const LandingPage = () => {
               {/* <!-- Column 3 --> */}
               <div>
                 <ul class="space-y-2">
-                  <h3 class="text-lg font-semibold ">For Educators</h3>
+                  <h3 class=" font-medium ">For Educators</h3>
                   <li>
                     <a href="#" class="hover:text-gray-300">
                       Teach on SkillHatch
@@ -466,7 +466,7 @@ export const LandingPage = () => {
               {/* <!-- Column 4 --> */}
               <div>
                 <ul class="space-y-2">
-                  <h3 class="text-lg font-semibold">Contact</h3>
+                  <h3 class=" font-medium">Contact</h3>
 
                   <li>
                     <a href="#" class="hover:text-gray-300">

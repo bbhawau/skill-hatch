@@ -31,5 +31,16 @@
     "instructor": "Prof. Daniel Musa",
     "rating": 3,
     "learners": 1700
+  },
+  {
+    "id": 4,
+    "image": "datasci.png",
+    "icon": "datasci-icon.png",
+    "title": "Data Science & Analytics",
+    "description": "Master data cleaning, visualization, and machine learning basics.",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "Dr. Henry Okafor",
+    "rating": 4.5,
+    "learners": 1300
   }
 ]
