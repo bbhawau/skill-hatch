@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { LandingPage } from "./pages/landing_page";
 import Login from "./pages/login";
 import SignUp from "./pages/signup";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/home";
 import { createContext, useState, useEffect } from "react";
 export const AuthContext = createContext();
 
