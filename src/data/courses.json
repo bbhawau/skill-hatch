@@ -8,7 +8,10 @@
     "instructorIcon": "prof-icon.png",
     "instructor": "Prof. James Okoro",
     "rating": 4.5,
-    "learners": 1200
+    "learners": 1200,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":12,
+    "price":"$20"
   },
   {
     "id": 2,
@@ -19,7 +22,10 @@
     "instructorIcon": "prof-icon.png",
     "instructor": "Prof. Sophia Adeyemi",
     "rating": 5,
-    "learners": 890
+    "learners": 890,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":22,
+    "price":"$17"
   },
   {
     "id": 3,
@@ -30,7 +36,10 @@
     "instructorIcon": "prof-icon.png",
     "instructor": "Prof. Daniel Musa",
     "rating": 3,
-    "learners": 1700
+    "learners": 1700,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":18,
+    "price":"$10"
   },
   {
     "id": 4,
@@ -41,6 +50,37 @@
     "instructorIcon": "prof-icon.png",
     "instructor": "Dr. Henry Okafor",
     "rating": 4.5,
-    "learners": 1300
+    "learners": 1300,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":25,
+    "price":"$35"
+  },
+  {
+    "id": 5,
+    "image": "contcreate.png",
+    "icon": "contcreate-icon.png",
+    "title": "Content Creation",
+    "description": "Master the art of storytelling, editing, and professional video production. Learn how to...",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "James Carter",
+    "rating": 4.5,
+    "learners": 1300,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":16,
+    "price":"FREE"
+  },
+  {
+    "id": 6,
+    "image": "mobiledev.png",
+    "icon": "mobiledev-icon.png",
+    "title": "Mobile App Development",
+    "description": "Build real-world mobile applications for both iOS and Android. You’ll explore frameworks like...",
+    "instructorIcon": "prof-icon.png",
+    "instructor": "James Carter",
+    "rating": 4.5,
+    "learners": 1300,
+    "instructorImage": "james-okoro-img.png",
+    "lessons":21,
+    "price":"FREE"
   }
 ]

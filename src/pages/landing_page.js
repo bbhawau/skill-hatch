@@ -104,7 +104,7 @@ export const LandingPage = () => {
             Explore our most viewed courses on SkillHatch.
           </p>
           <div>
-            <Courses limit={3} />
+            <Courses limit={3} variant="default"/>
           </div>
           <Button variant="blue" text="Explore all courses" />
         </div>
