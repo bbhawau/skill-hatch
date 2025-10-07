@@ -21,6 +21,7 @@ export default function Courses( { courses = allCourses, limit, variant="default
           instructorImage={course.instructorImage}
           lessons={course.lessons}
           price={course.price}
+          progress={course.progress}
           onViewDetails={onViewDetails}        />
       ))}
     </div>

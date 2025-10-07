@@ -25,6 +25,7 @@ const SelectedCourses = ({ onViewDetails }) => {
             learners={course.learners}
             lessons={course.lessons}
             price={course.price}
+            progress={course.progress}
             showProgress={true}
             onViewDetails={onViewDetails}
           />

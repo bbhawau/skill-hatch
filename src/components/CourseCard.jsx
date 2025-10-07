@@ -16,7 +16,7 @@ const CourseCard = ({
   instructorImage,
   lessons,
   price,
-  progress = 0, // progress percentage (0–100)
+  progress, // progress percentage (0–100)
   showProgress = false,
   onViewDetails,
 }) => {
