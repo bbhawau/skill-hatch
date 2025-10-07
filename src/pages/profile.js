@@ -171,13 +171,13 @@ const Profile = () => {
                     <div className=" flex flex-col bg-[#e3f1ff] p-5 rounded-lg">
                         <p className="font-medium text-xl mb-2">Community Engagement</p>
                         <div className="flex mb-2">
-                            <img src="file-badge.png" className="w-6 h-6 mr-2" />
+                            <img src="forum.png" className="w-6 h-6 mr-2" />
                             <div>
                                 <p className="font-medium text-md">Forum Post</p>
                                 <p className="text-gray-500 text-sm">Data Science Discussion</p></div>
                         </div>
                         <div className="flex mb-2">
-                            <img src="file-badge.png" className="w-6 h-6 mr-2" />
+                            <img src="study-group.png" className="w-6 h-6 mr-2" />
                             <div>
                                 <p className="font-medium text-md">Study Group</p>
                                 <p className="text-gray-500 text-sm">ML Project</p></div>

@@ -1,6 +1,7 @@
 import { Search } from "lucide-react";
 import Courses from "../components/Courses";
-const ExploreCourses = () => {
+const ExploreCourses = ({onViewDetails}) => {
+  
   return (
     <div classname="w-full">
       <div className="w-full flex justify-between">
@@ -28,7 +29,7 @@ const ExploreCourses = () => {
         </div>
       </div>
       {/* Courses */}
-      <Courses variant="courses_page"/>
+      <Courses variant="courses_page" onViewDetails={onViewDetails}/>
     </div>
   );
 };

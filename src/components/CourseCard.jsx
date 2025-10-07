@@ -1,7 +1,9 @@
 import Button from "./Button";
 import StarRating from "./StarRating";
+import { Link } from "react-router-dom";
 
 const CourseCard = ({
+  id,
   image,
   icon,
   title,
@@ -14,6 +16,9 @@ const CourseCard = ({
   instructorImage,
   lessons,
   price,
+  progress = 0, // progress percentage (0–100)
+  showProgress = false,
+  onViewDetails,
 }) => {
   if (variant === "courses_page") {
     return (
@@ -47,6 +52,17 @@ const CourseCard = ({
           <p className="text-gray-500 text-xs mb-3">{description}</p>
           {/* Lessons */}
           <p className="text-[#00418c] mb-3">{lessons} Lessons</p>
+          {showProgress && (
+            <div className="flex items-center mb-3">
+              <div className="w-1/2 bg-[#c2deff] h-3 rounded-full mr-2">
+                <div
+                  className="bg-[#00418c] h-full rounded-full transition-all duration-500"
+                  style={{ width: `${progress}%` }}
+                ></div>
+              </div>
+              <p className="text-sm">{progress}% complete</p>
+            </div>
+          )}
           {/* Price */}
           <div className="flex text-sm items-center mb-3">
             <span className="font-medium ">PRICE:</span>
@@ -55,7 +71,13 @@ const CourseCard = ({
             </div>
           </div>
           {/* view details */}
-          <Button variant="blue" text="View Details" className="w-full" />
+
+          <Button
+            variant="blue"
+            text={showProgress ? "Click to Continue" : "View Details"}
+            className="w-full"
+            onClick={() => onViewDetails(id)}
+          />
         </div>
       </div>
     );

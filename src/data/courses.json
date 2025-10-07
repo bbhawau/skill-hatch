@@ -11,7 +11,8 @@
     "learners": 1200,
     "instructorImage": "james-okoro-img.png",
     "lessons":12,
-    "price":"$20"
+    "price":"$20",
+    "progress": 54
   },
   {
     "id": 2,
@@ -25,7 +26,8 @@
     "learners": 890,
     "instructorImage": "james-okoro-img.png",
     "lessons":22,
-    "price":"$17"
+    "price":"$17",
+    "progress": 0
   },
   {
     "id": 3,
@@ -39,7 +41,8 @@
     "learners": 1700,
     "instructorImage": "james-okoro-img.png",
     "lessons":18,
-    "price":"$10"
+    "price":"$10",
+    "progress": 0
   },
   {
     "id": 4,
@@ -53,7 +56,8 @@
     "learners": 1300,
     "instructorImage": "james-okoro-img.png",
     "lessons":25,
-    "price":"$35"
+    "price":"$35",
+    "progress": 78
   },
   {
     "id": 5,
@@ -67,7 +71,8 @@
     "learners": 1300,
     "instructorImage": "james-okoro-img.png",
     "lessons":16,
-    "price":"FREE"
+    "price":"FREE",
+    "progress": 94
   },
   {
     "id": 6,
@@ -81,6 +86,7 @@
     "learners": 1300,
     "instructorImage": "james-okoro-img.png",
     "lessons":21,
-    "price":"FREE"
+    "price":"FREE",
+    "progress": 0
   }
 ]

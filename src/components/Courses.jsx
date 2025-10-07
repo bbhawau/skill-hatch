@@ -1,13 +1,14 @@
 import CourseCard from "./CourseCard";
-import courses from "../data/courses.json";
+import allCourses from "../data/courses.json";
 
-export default function Courses( { limit, variant="default" }) {
+export default function Courses( { courses = allCourses, limit, variant="default", onViewDetails }) {
   const displayedCourses = limit ? courses.slice(0, limit) : courses;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
       {displayedCourses.map((course) => (
         <CourseCard
           key={course.id} 
+          id={course.id} 
           image={course.image}
           variant={variant}
           icon={course.icon}
@@ -19,7 +20,8 @@ export default function Courses( { limit, variant="default" }) {
           learners={course.learners}
           instructorImage={course.instructorImage}
           lessons={course.lessons}
-          price={course.price}        />
+          price={course.price}
+          onViewDetails={onViewDetails}        />
       ))}
     </div>
   );
