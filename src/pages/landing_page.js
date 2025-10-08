@@ -14,10 +14,26 @@ export const LandingPage = () => {
           <img src="/logo.png" alt="logo" className="h-15" />
 
           <nav className="flex items-center justify-between space-x-10 font-medium">
-            <Link to="/courses">Courses</Link>
-            <Link to="/about">About</Link>
-            <Link to="/faq">FAQ</Link>
-            <Link to="/contact">Contact</Link>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("featured-courses")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Courses
+            </button>
+            <button>About</button>
+            <button>FAQ</button>
+            <button
+              onClick={() =>
+                document
+                  .getElementById("footer")
+                  .scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact
+            </button>
             <div className="space-x-2">
               <Link to="/login">
                 <Button text="Login" variant="white" />
@@ -96,7 +112,7 @@ export const LandingPage = () => {
           </div>
         </div>
         {/* featured courses */}
-        <div className="w-full mt-20">
+        <div id="featured-courses" className="w-full mt-20">
           <p className="text-3xl font-bold">
             Featured <span className="text-[#00418c]"> Courses</span>{" "}
           </p>
@@ -104,7 +120,7 @@ export const LandingPage = () => {
             Explore our most viewed courses on SkillHatch.
           </p>
           <div>
-            <Courses limit={3} variant="default"/>
+            <Courses limit={3} variant="default" />
           </div>
           <Button variant="blue" text="Explore all courses" />
         </div>
@@ -314,7 +330,10 @@ export const LandingPage = () => {
           </button>
         </div>
       </div>
-      <footer className="bg-[#00418c] w-full text-white flex flex-col place-content-center">
+      <footer
+        id="footer"
+        className="bg-[#00418c] w-full text-white flex flex-col place-content-center"
+      >
         <div className="w-9/10 flex place-self-center items-center justify-between p-10">
           <div className="flex flex-col w-1/5">
             <img src="logo-white.png" />
@@ -353,7 +372,9 @@ export const LandingPage = () => {
                 <FaXTwitter size={12} />
               </a>
             </div>
-            <p className="text-gray-500 text-xs">Follow us on social media, never miss a thing!</p>
+            <p className="text-gray-500 text-xs">
+              Follow us on social media, never miss a thing!
+            </p>
           </div>
           {/* quick links */}
           <div className="w-7/10">

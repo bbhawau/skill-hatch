@@ -11,9 +11,9 @@ export default function Button({
   className = "",
 }) {
   const styles = {
-    blue: "bg-[#00418c] text-white text-sm border border-[#00418c] ",
-    white: "bg-white text-[#00418c] text-sm border border-[#00418c] ",
-    lightblue: "bg-[#c2deff] text-[#00418c] text-sm border border-[#00418c]",
+    blue: "bg-[#00418c] text-white text-sm border border-[#00418c] hover:bg-[#c2deff] hover:text-[#00418c] ",
+    white: "bg-white text-[#00418c] text-sm border border-[#00418c] hover:bg-[#00418c] hover:text-white ",
+    lightblue: "bg-[#c2deff] text-[#00418c] text-sm border border-[#00418c] hover:bg-[#00418c] hover:text-white ",
   };
   const layout = icon ? "flex items-center justify-center gap-2" : "";
   return (
@@ -28,7 +28,7 @@ export default function Button({
       {typeof icon === "string" ? (
         <img src={icon} alt="" className="w-4 h-4 object-contain" />
       ) : (
-        icon && <span className="w-4 h-4">{icon}</span>
+        icon && <span className="flex items-center justify-center  w-4 h-4">{icon}</span>
       )}
       <span>{text}</span>
     </button>

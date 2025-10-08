@@ -5,6 +5,7 @@ import Button from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { AuthContext } from "../App";
+import { ArrowLeft } from "lucide-react";
 const Login = () => {
   const [successMsg, setSuccessMsg] = useState("");
   const { setUserEmail } = useContext(AuthContext);
@@ -35,7 +36,7 @@ const Login = () => {
     setUserEmail(data.email);
     setSuccessMsg("✅ Login successful!");
     reset();
-    
+
     setTimeout(() => {
       setSuccessMsg("");
       navigate("/dashboard");
@@ -52,6 +53,15 @@ const Login = () => {
       <div className=" flex items-center justify-center w-full h-[100vh]  ">
         {/* left side */}
         <div className="w-1/2 max-md:w-full place-items-center ">
+          
+            <Button
+              className="absolute top-6 left-6"
+              variant="lightblue"
+              text="Back to Home"
+              icon={<ArrowLeft />}
+              onClick={() => navigate("/")}
+            />
+          
           <div className="w-3/5 max-lg:w-4/5  place-items-center border-8 border-[#00418c] rounded-xl px-5 py-5">
             <img src="icon.png" className="mb-10" />
             <p className="text-2xl text-center">
