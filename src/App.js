@@ -26,10 +26,6 @@ function App() {
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/courses" />
-            <Route path="/about" />
-            <Route path="/faq" />
-            <Route path="/contact" />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/dashboard" element={<Home />} />
