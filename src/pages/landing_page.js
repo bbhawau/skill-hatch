@@ -52,12 +52,12 @@ export const LandingPage = () => {
               Learn Skills <br />
               That <span className="text-[#00418c]">Open Doors</span>{" "}
             </p>
-            <p className="text-gray-500 ">
-              Curated online courses help you grow in technology, business, and
+            <p className="text-gray-500 text-md leading-6">
+              Curated online courses help you grow in technology, <br/>business, and
               creativity.
             </p>
-            <p className="text-gray-500 mb-5">
-              Learn from experts, gain practical skills, and apply them to real
+            <p className="text-gray-500 text-md leading-6 mb-5">
+              Learn from experts, gain practical skills, and apply them to <br/> real
               opportunities.
             </p>
             <Link to="/signup">
