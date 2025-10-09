@@ -1,12 +1,46 @@
 import { useState } from "react";
 import { useForm, FormProvider } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import Button from "../components/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 
 const SignUp = () => {
   const [step, setStep] = useState(1);
+  const [successMsg, setSuccessMsg] = useState("");
+
+
+  const schema = yup.object().shape({
+    firstName: yup
+      .string()
+      .required("First name is required"),
+    lastName: yup
+      .string()
+      .required("Last name is required"),
+    email: yup
+      .string()
+      .email("Invalid email format")
+      .required("Email is required"),
+    password: yup
+      .string()
+      .min(6, "Password should be at least 6 characters")
+      .max(20, "Password cannot be more than 20 characters")
+      .required("Password is required"),
+    gender: yup
+      .string()
+      .required("Please select your gender"),
+    fieldOfInterest: yup
+      .string()
+      .required("Please select a field of interest"),
+    terms: yup
+      .boolean()
+      .oneOf([true], "You must agree to the Terms and Privacy Policy"),
+  });
+
   const methods = useForm({
+    resolver: yupResolver(schema),
+    mode: "onSubmit",
     defaultValues: {
       month: "",
       year: "",
@@ -18,6 +52,23 @@ const SignUp = () => {
       fieldOfInterest: "",
     },
   });
+  const {
+    handleSubmit,
+    reset,
+    register,
+    formState: { errors },
+  } = methods;
+
+  const onSubmit = (data) => {
+    console.log(data);
+    setSuccessMsg("✅ Sign Up successful!");
+    reset();
+
+    setTimeout(() => {
+      setSuccessMsg("");
+      navigate("/login");
+    }, 2000);
+  };
 
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
@@ -25,6 +76,11 @@ const SignUp = () => {
 
   return (
     <div className="w-full place-items-center items-center">
+      {successMsg && (
+        <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-[#00418c] text-[#c2deff] px-10 py-6 rounded-lg shadow-lg text-center font-medium z-50">
+          {successMsg}
+        </div>
+      )}
       <div className="flex items-center justify-center w-full h-[100vh]">
         {/* left side */}
         <div className="w-1/2 place-items-center">
@@ -34,7 +90,7 @@ const SignUp = () => {
                 variant="lightblue"
                 text="Back"
                 onClick={prevStep}
-                icon="backarrow.png"
+                icon={<ArrowLeft  />}
               />
             )}
           </div>
@@ -43,7 +99,7 @@ const SignUp = () => {
               className="absolute top-6 left-6"
               variant="lightblue"
               text="Back to Home"
-              icon={<ArrowLeft className="" />}
+              icon={<ArrowLeft  />}
               onClick={() => navigate("/")}
             />
           )}
@@ -51,7 +107,7 @@ const SignUp = () => {
           <div className="w-3/5 border-8 border-[#00418c] rounded-xl px-5 py-5">
             <FormProvider {...methods}>
               <form
-                onSubmit={methods.handleSubmit((data) => console.log(data))}
+                onSubmit={handleSubmit(onSubmit)}
               >
                 {step === 1 && (
                   <div>
@@ -153,6 +209,11 @@ const SignUp = () => {
                           {...methods.register("firstName")}
                           className="w-full mb-3 border-1 border-[#00418c] rounded-md px-3 py-2"
                         />
+                        {errors.firstName && (
+                          <p className="w-full bg-red-200 p-1 text-red-500 ">
+                            {errors.firstName?.message}
+                          </p>
+                        )}
                       </div>
                       <div className="w-9/20">
                         <p className="font-medium">Lastname</p>
@@ -160,6 +221,11 @@ const SignUp = () => {
                           {...methods.register("lastName")}
                           className="w-full mb-3 border-1 border-[#00418c] rounded-md px-3 py-2"
                         />
+                        {errors.lastName && (
+                          <p className="w-full bg-red-200 p-1 text-red-500 ">
+                            {errors.lastName?.message}
+                          </p>
+                        )}
                       </div>
                     </div>
 
@@ -168,13 +234,22 @@ const SignUp = () => {
                       {...methods.register("email")}
                       className="w-full mb-3 border-1 border-[#00418c] rounded-md px-3 py-2"
                     />
-
+                    {errors.email && (
+                      <p className="w-full bg-red-200 p-1 text-red-500 ">
+                        {errors.email?.message}
+                      </p>
+                    )}
                     <p className="font-medium">Password</p>
                     <input
                       type="password"
                       {...methods.register("password")}
                       className="w-full mb-3 border-1 border-[#00418c] rounded-md px-3 py-2"
                     />
+                    {errors.password && (
+                      <p className="w-full bg-red-200 p-1 text-red-500 ">
+                        {errors.password?.message}
+                      </p>
+                    )}
 
                     {/* gender */}
                     <div className="mb-5">
@@ -207,6 +282,11 @@ const SignUp = () => {
                           </span>
                         </label>
                       </div>
+                      {errors.gender && (
+                        <p className="w-full bg-red-200 p-1 text-red-500 ">
+                          {errors.gender?.message}
+                        </p>
+                      )}
                     </div>
 
                     {/* field of interest */}
@@ -223,11 +303,16 @@ const SignUp = () => {
                         <option value="business">Business</option>
                         <option value="design">Design</option>
                       </select>
+                      {errors.fieldOfInterest && (
+                        <p className="w-full bg-red-200 p-1 text-red-500 ">
+                          {errors.fieldOfInterest?.message}
+                        </p>
+                      )}
                     </div>
 
                     {/* terms */}
                     <div className="flex items-center mb-3">
-                      <input type="checkbox" id="privacy" />
+                      <input type="checkbox" id="privacy" {...methods.register("terms")} />
                       <label
                         htmlFor="privacy"
                         className="text-sm text-gray-600 ml-2"
@@ -241,6 +326,10 @@ const SignUp = () => {
                         <span className="text-[#00418c]">Privacy Policy</span>
                       </label>
                     </div>
+                    {errors.terms && (
+                      <p className="text-red-500 text-sm mt-1">{errors.terms.message}</p>
+                    )}
+
 
                     <Button
                       variant="white"
