@@ -10,7 +10,7 @@ export default function CourseDetails({ id, onBack }) {
 
   return (
     <div className="w-full">
-      <button onClick={onBack} className="text-[#00418c] mb-4 hover:underline">
+      <button onClick={onBack} className="text-[#00418c] mt-8 mb-2 hover:underline">
         ← Back to Courses
       </button>
 

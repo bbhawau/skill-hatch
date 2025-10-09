@@ -8,7 +8,7 @@ const Profile = () => {
         <div className="flex flex-col w-9/10 px-10 py-8">
             <div className="w-full flex py-8 items-center">
                 <div className="h-40 w-40 rounded-full border border-[#00418c] mr-10">
-
+  <img src="avatar.avif" className="w-full h-full object-cover rounded-full"/>
                 </div>
                 <div>
                     <p className="text-3xl font-bold ">Taylor Roberts</p>

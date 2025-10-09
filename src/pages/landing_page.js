@@ -11,7 +11,7 @@ export const LandingPage = () => {
       <div className="bg-white w-9/10 ">
         {/* nav */}
         <div className=" w-full flex justify-between">
-          <img src="/logo.png" alt="logo" className="h-15" />
+          <img src="/logo.png" alt="logo" className="h-15 " />
 
           <nav className="flex items-center justify-between space-x-10 font-medium">
             <button
@@ -65,11 +65,11 @@ export const LandingPage = () => {
             </Link>
           </div>
           {/* image */}
-          <div className="w-1/2 h-full">
+          <div className="w-1/2 h-full object-cover">
             <img
               src="/landingpic.png"
               alt="woman at desk"
-              className="w-full h-full "
+              className=" w-full h-full "
             />
           </div>
         </div>
@@ -339,7 +339,7 @@ export const LandingPage = () => {
           <div className="flex flex-col w-1/5">
             <img src="logo-white.png" />
             {/* socials */}
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center">
               <a
                 href="https://linkedin.com"
                 target="_blank"
@@ -373,7 +373,7 @@ export const LandingPage = () => {
                 <FaXTwitter size={12} />
               </a>
             </div>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-500 text-xs mt-5 text-center">
               Follow us on social media, never miss a thing!
             </p>
           </div>
