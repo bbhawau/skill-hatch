@@ -45,7 +45,7 @@ export const LandingPage = () => {
           </nav>
         </div>
         {/* body */}
-        <div className="flex bg-white h-120">
+        <div className="flex bg-white ">
           {/* text */}
           <div className="w-1/2 place-content-center">
             <p className="text-5xl font-bold mb-5">
@@ -65,11 +65,11 @@ export const LandingPage = () => {
             </Link>
           </div>
           {/* image */}
-          <div className="w-1/2 h-full object-cover">
+          <div className="w-1/2 ">
             <img
               src="/landingpic.png"
               alt="woman at desk"
-              className=" w-full h-full "
+              className=" w-full object-cover "
             />
           </div>
         </div>
