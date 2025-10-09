@@ -65,16 +65,16 @@ export const LandingPage = () => {
             </Link>
           </div>
           {/* image */}
-          <div className="w-1/2">
+          <div className="w-1/2 place-content-center ">
             <img
               src="/landingpic.png"
               alt="woman at desk"
-              className=" w-full  object-cover "
+              className=" w-full h-4/5 object-cover "
             />
           </div>
         </div>
         {/* why skill hatch */}
-        <div className="w-full mt-10">
+        <div className="w-full mt-5">
           <p className="text-3xl font-bold">
             Why <span className="text-[#00418c]"> SKILLHATCH?</span>{" "}
           </p>
