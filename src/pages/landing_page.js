@@ -48,7 +48,7 @@ export const LandingPage = () => {
         <div className="flex bg-white ">
           {/* text */}
           <div className="w-1/2 place-content-center">
-            <p className="text-5xl font-bold mb-5">
+            <p className="text-7xl font-bold mb-5">
               Learn Skills <br />
               That <span className="text-[#00418c]">Open Doors</span>{" "}
             </p>
