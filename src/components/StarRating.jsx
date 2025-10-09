@@ -8,7 +8,7 @@ const StarRating = ({ rating, learners }) => {
       } else if (rating >= i - 0.5) {
         stars.push(<FaStarHalfAlt key={i} className="text-yellow-500 text-3xl mr-2" />);
       } else {
-        stars.push(<FaRegStar key={i} className="text-yellow-500 text-3xl mr-2" />);
+        stars.push(<FaRegStar key={i} className="text-yellow-500 text-3xl mr-2 " />);
       }
     }
     return stars;
