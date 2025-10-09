@@ -46,22 +46,21 @@ const Login = () => {
     <div className="w-full place-items-center items-center">
       {" "}
       {successMsg && (
-        <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-white text-green-500 px-6 py-3 rounded-lg shadow-lg text-center font-medium z-50">
+        <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-[#00418c] text-[#c2deff] px-10 py-6 rounded-lg shadow-lg text-center font-medium z-50">
           {successMsg}
         </div>
       )}
       <div className=" flex items-center justify-center w-full h-[100vh]  ">
         {/* left side */}
         <div className="w-1/2 max-md:w-full place-items-center ">
-          
-            <Button
-              className="absolute top-6 left-6"
-              variant="lightblue"
-              text="Back to Home"
-              icon={<ArrowLeft />}
-              onClick={() => navigate("/")}
-            />
-          
+          <Button
+            className="absolute top-6 left-6"
+            variant="lightblue"
+            text="Back to Home"
+            icon={<ArrowLeft />}
+            onClick={() => navigate("/")}
+          />
+
           <div className="w-3/5 max-lg:w-4/5  place-items-center border-8 border-[#00418c] rounded-xl px-5 py-5">
             <img src="icon.png" className="mb-10" />
             <p className="text-2xl text-center">
