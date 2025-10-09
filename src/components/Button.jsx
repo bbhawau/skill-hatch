@@ -28,7 +28,7 @@ export default function Button({
       {typeof icon === "string" ? (
         <img src={icon} alt="" className="w-4 h-4 object-contain" />
       ) : (
-        icon && <span className="flex items-center justify-center  w-4 h-4">{icon}</span>
+        icon && <span className="flex items-center justify-center w-4 h-4">{icon}</span>
       )}
       <span>{text}</span>
     </button>

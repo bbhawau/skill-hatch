@@ -39,17 +39,14 @@ const SignUp = () => {
             )}
           </div>
           {step === 1 && (
-
-
-              <Button
-                className="absolute top-6 left-6"
-                variant="lightblue"
-                text="Back to Home"
-                icon={<ArrowLeft className="" />}
-                onClick={() => navigate("/")}
-              />
-            )}
-
+            <Button
+              className="absolute top-6 left-6"
+              variant="lightblue"
+              text="Back to Home"
+              icon={<ArrowLeft className="" />}
+              onClick={() => navigate("/")}
+            />
+          )}
 
           <div className="w-3/5 border-8 border-[#00418c] rounded-xl px-5 py-5">
             <FormProvider {...methods}>
@@ -57,24 +54,31 @@ const SignUp = () => {
                 onSubmit={methods.handleSubmit((data) => console.log(data))}
               >
                 {step === 1 && (
-                  <div >
+                  <div>
                     <div className="place-items-center">
                       <img src="icon.png" className="mb-5" />
                       <p className="text-2xl text-center mb-3">
                         Get started with your <br />
-                        <span className="text-[#00418c]">SKILLHATCH</span> account
+                        <span className="text-[#00418c]">SKILLHATCH</span>{" "}
+                        account
                       </p>
                       <p className="text-gray-500">
                         Already have an account.{" "}
                         <Link to="/login">
-                          <span className="text-[#00418c]">Log in instead.</span>
+                          <span className="text-[#00418c]">
+                            Log in instead.
+                          </span>
                         </Link>
                       </p>
 
                       <div className="mt-10">
                         <p className="mb-2">Join SkillHatch for free as a </p>
                         <div>
-                          <Button variant="blue" text="Learner" rounded={false} />
+                          <Button
+                            variant="blue"
+                            text="Learner"
+                            rounded={false}
+                          />
                           <Button
                             variant="white"
                             text="Teacher"

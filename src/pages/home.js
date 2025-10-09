@@ -52,8 +52,8 @@ const Home = () => {
             return (
               <Button
                 key={item.key}
-                variant={isActive ? "lightblue" : "blue"} // highlight active
-                icon={<Icon className="w-full h-full" color={isActive ? "#00418c" : "#ffffff"} />}
+                variant={isActive ? "lightblue" : "blue"} 
+                icon={<Icon className="w-full h-full" />}
                 text={item.label}
                 className=" w-full justify-start mb-2 py-2 "
                 onClick={() => setActive(item.key)}

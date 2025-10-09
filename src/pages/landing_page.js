@@ -122,7 +122,8 @@ export const LandingPage = () => {
           <div>
             <Courses limit={3} variant="default" />
           </div>
-          <Button variant="blue" text="Explore all courses" />
+          <Link to="/login">
+          <Button variant="blue" text="Explore all courses"  /></Link>
         </div>
         {/* how it works */}
         <div className="w-full mt-20">

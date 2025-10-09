@@ -1,6 +1,5 @@
 import Button from "./Button";
 import StarRating from "./StarRating";
-import { Link } from "react-router-dom";
 
 const CourseCard = ({
   id,
@@ -19,6 +18,7 @@ const CourseCard = ({
   progress, // progress percentage (0–100)
   showProgress = false,
   onViewDetails,
+  category,
 }) => {
   if (variant === "courses_page") {
     return (

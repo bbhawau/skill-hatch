@@ -1,7 +1,25 @@
 import { Search } from "lucide-react";
 import Courses from "../components/Courses";
-const ExploreCourses = ({onViewDetails}) => {
-  
+import allCourses from "../data/courses.json";
+import { useState } from "react";
+const ExploreCourses = ({ onViewDetails }) => {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+
+  // Filter logic
+  const filteredCourses = allCourses.filter((course) => {
+    const matchesSearch =
+      course.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      course.description.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const matchesCategory =
+      selectedCategory === "all" ||
+      (course.category &&
+        course.category.toLowerCase() === selectedCategory.toLowerCase());
+
+    return matchesSearch && matchesCategory;
+  });
+
   return (
     <div classname="w-full">
       <div className="w-full flex justify-between">
@@ -9,27 +27,41 @@ const ExploreCourses = ({onViewDetails}) => {
           <input
             placeholder="Search courses"
             className="w-full focus:outline-none"
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+            }}
           />
           <Search className="text-gray-500 w-5 h-5" />
         </div>
         <div className="flex items-center w-1/5 justify-between ">
           <p className="font-medium">Filter by</p>
           <div className="">
-            <select className="w-full border-1 border-[#00418c] bg-[#c2deff] text-gray-500 rounded-md px-3 py-2 focus:outline-none">
+            <select
+              className="w-full border-1 border-[#00418c] text-gray-500 rounded-md px-3 py-2 focus:outline-none"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option value="all">All</option>
               <option value="technology">Technology</option>
-              <option value="business">Business</option>
-              <option value="creative arts">Creative Arts</option>
-              <option value="science and health">Science and Health</option>
-              <option value="languages">Languages</option>
               <option value="lifestyle">Lifestyle</option>
-              <option value="sports">Sports</option>
               <option value="graphic design">Graphic Design</option>
             </select>
           </div>
         </div>
       </div>
       {/* Courses */}
-      <Courses variant="courses_page" onViewDetails={onViewDetails}/>
+      {filteredCourses.length > 0 ? (
+        <Courses
+          courses={filteredCourses}
+          variant="courses_page"
+          onViewDetails={onViewDetails}
+        />
+      ) : (
+        <p className="text-gray-500 text-center mt-10">
+          No courses found matching your search.
+        </p>
+      )}
     </div>
   );
 };

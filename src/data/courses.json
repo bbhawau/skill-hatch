@@ -12,7 +12,8 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":12,
     "price":"$20",
-    "progress": 54
+    "progress": 54,
+    "category": "Technology"
   },
   {
     "id": 2,
@@ -27,7 +28,8 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":22,
     "price":"$17",
-    "progress": 0
+    "progress": 0,
+    "category": "Technology"
   },
   {
     "id": 3,
@@ -42,7 +44,8 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":18,
     "price":"$10",
-    "progress": 0
+    "progress": 0,
+    "category": "Graphic Design"
   },
   {
     "id": 4,
@@ -57,7 +60,8 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":25,
     "price":"$35",
-    "progress": 78
+    "progress": 78,
+    "category": "Technology"
   },
   {
     "id": 5,
@@ -72,7 +76,8 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":16,
     "price":"FREE",
-    "progress": 94
+    "progress": 94,
+    "category": "Lifestyle"
   },
   {
     "id": 6,
@@ -87,6 +92,7 @@
     "instructorImage": "james-okoro-img.png",
     "lessons":21,
     "price":"FREE",
-    "progress": 0
+    "progress": 0,
+    "category": "Technology"
   }
 ]

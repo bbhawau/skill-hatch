@@ -22,7 +22,8 @@ export default function Courses( { courses = allCourses, limit, variant="default
           lessons={course.lessons}
           price={course.price}
           progress={course.progress}
-          onViewDetails={onViewDetails}        />
+          onViewDetails={onViewDetails} 
+          category={course.category}       />
       ))}
     </div>
   );
