@@ -45,7 +45,7 @@ export const LandingPage = () => {
           </nav>
         </div>
         {/* body */}
-        <div className="flex bg-white h-100">
+        <div className="flex bg-white h-120">
           {/* text */}
           <div className="w-1/2 place-content-center">
             <p className="text-5xl font-bold mb-5">
