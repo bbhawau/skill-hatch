@@ -65,11 +65,11 @@ export const LandingPage = () => {
             </Link>
           </div>
           {/* image */}
-          <div className="w-1/2 ">
+          <div className="w-1/2">
             <img
               src="/landingpic.png"
               alt="woman at desk"
-              className=" w-full object-cover "
+              className=" w-full  object-cover "
             />
           </div>
         </div>
